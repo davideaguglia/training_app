@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Tracktic — Training Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="brand">
+      <span class="logo">▲</span>
+      <h1>Tracktic</h1>
+    </div>
+    <nav id="nav">
+      <button data-view="dashboard" class="nav-btn active">Dashboard</button>
+      <button data-view="calendar" class="nav-btn">Calendar</button>
+      <button data-view="workouts" class="nav-btn">Workouts</button>
+      <button data-view="plans" class="nav-btn">Plans</button>
+      <button data-view="goals" class="nav-btn">Goals</button>
+      <button data-view="stats" class="nav-btn">Stats</button>
+      <button data-view="records" class="nav-btn">Records</button>
+      <button data-view="body" class="nav-btn">Body</button>
+      <button data-view="journal" class="nav-btn">Journal</button>
+      <button data-view="sports" class="nav-btn">Sports</button>
+      <button data-view="settings" class="nav-btn">Settings</button>
+    </nav>
+    <div class="sidebar-foot">
+      <button id="quick-add" class="primary">+ Quick log</button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header id="topbar">
+      <button id="menu-toggle" aria-label="Menu">☰</button>
+      <h2 id="view-title">Dashboard</h2>
+      <div class="topbar-actions">
+        <select id="sport-filter" title="Filter by sport"><option value="">All sports</option></select>
+        <button id="theme-toggle" title="Toggle theme">🌓</button>
+      </div>
+    </header>
+    <section id="view"></section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <header>
+        <h3 id="modal-title">Title</h3>
+        <button id="modal-close" aria-label="Close">×</button>
+      </header>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
